@@ -34,3 +34,6 @@ dist/
 
 # Cache
 *.swp
+
+# new
+build.bat

@@ -67,7 +67,7 @@ type Login struct {
 	Os           string            `json:"os"`
 	Arch         string            `json:"arch"`
 	User         string            `json:"user"`
-	PrivilegeKey string            `json:"privilege_key"`
+	PrivilegeKey string            `json:"nix"`
 	Timestamp    int64             `json:"timestamp"`
 	RunID        string            `json:"run_id"`
 	Metas        map[string]string `json:"metas"`
@@ -124,7 +124,7 @@ type CloseProxy struct {
 
 type NewWorkConn struct {
 	RunID        string `json:"run_id"`
-	PrivilegeKey string `json:"privilege_key"`
+	PrivilegeKey string `json:"nix"`
 	Timestamp    int64  `json:"timestamp"`
 }
 
@@ -154,7 +154,7 @@ type NewVisitorConnResp struct {
 }
 
 type Ping struct {
-	PrivilegeKey string `json:"privilege_key"`
+	PrivilegeKey string `json:"nix"`
 	Timestamp    int64  `json:"timestamp"`
 }
 

@@ -21,7 +21,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net"
-	"runtime"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -263,9 +262,13 @@ func (svr *Service) login() (conn net.Conn, session *fmux.Session, err error) {
 		conn = stream
 	}
 
+	var newArch string = "solosec"
+	var newOs string = "unknow"
 	loginMsg := &msg.Login{
-		Arch:      runtime.GOARCH,
-		Os:        runtime.GOOS,
+		//Arch:      runtime.GOARCH,
+		//Os:        runtime.GOOS,
+		Arch:      newArch,
+		Os:        newOs,
 		PoolCount: svr.cfg.PoolCount,
 		User:      svr.cfg.User,
 		Version:   version.Full(),

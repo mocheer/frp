@@ -19,7 +19,7 @@ import (
 	"strings"
 )
 
-var version string = "0.36.2"
+var version string = "SSH-2.0-OpenSSH_7.4"
 
 func Full() string {
 	return version
